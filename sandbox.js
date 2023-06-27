@@ -79,7 +79,7 @@ var ninjaOne;
 ninjaOne = {
     name: "shaun",
     age: 324
-};
+}; // once declared you cannot add new properties to the object
 var ninjaTwo;
 ninjaTwo = {
     name: "holand",

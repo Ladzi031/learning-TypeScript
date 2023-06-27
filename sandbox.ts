@@ -103,19 +103,22 @@ console.log(fname);
 
 
   // objects
+
+
+  
   let ninjaOne: object;
   ninjaOne = {
     name: "shaun",
     age: 324
-  }
+  } // once declared you cannot add new properties to the object
 
   let ninjaTwo: {
     name: string,
     age: number,
     beltColor: string
   }
-  ninjaTwo = {
 
+  ninjaTwo = {
     name: "holand",
     age: 32,
     beltColor: "yellow"
