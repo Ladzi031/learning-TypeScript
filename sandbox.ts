@@ -46,3 +46,77 @@ console.log(fname);
   mixedArray.push("ronaldo");
   mixedArray[mixedArray.length] = 3;
   mixedArray.forEach(el => console.log(el));
+
+  // objects
+  let ninja = {
+    name: "ladzi031",
+    belt: "black",
+    age: 21
+  }
+  //ninja.age = "32";
+  ninja.age = 22;
+
+  // cannot add a new property on the fly, once initial object has been declared...
+  //ninja.skills = ["jumping", "fighting", "driving-fast"];
+
+  // when using a new object with the same name... it has to take on the exact structure of the original object... same property-names
+  ninja = {
+    name: "james",
+    belt: "white",
+    age: 89
+  }
+  // for the above code... the data-type is infered automatically
+
+
+
+  // Explicit TYPES
+  let firstName: string;
+  let lastName: string;
+  let personAge: number;
+  let isLoggedIn: boolean;
+
+  personAge = 45;
+  //personAge = "twenty one";
+
+  isLoggedIn = true;
+  //isLoggedIn = "yes";
+
+  // arrays with Explicit-TYPES
+  let ninjaList:string[] = [];
+  ninjaList.push("messi");
+
+
+  //UNION TYPES
+  // with the syntax to state that this array accepts more than one data-type "union operator--- think of: OR" remeber... 
+  let mixed:(string|number|boolean)[] = []; // empty array
+  mixed.push("jacobs");
+  mixed.push(32);
+  mixed.push(false);
+
+
+  // UNION TYPES for normal variables
+  let uid: (string|number);
+  uid = "324";
+  uid = 324;
+  //uid = false;
+
+
+
+  // objects
+  let ninjaOne: object;
+  ninjaOne = {
+    name: "shaun",
+    age: 324
+  }
+
+  let ninjaTwo: {
+    name: string,
+    age: number,
+    beltColor: string
+  }
+  ninjaTwo = {
+
+    name: "holand",
+    age: 32,
+    beltColor: "yellow"
+  }
