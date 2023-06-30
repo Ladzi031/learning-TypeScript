@@ -1,3 +1,4 @@
+/* 
 const character = 'mario';
 console.log(character);
 
@@ -145,13 +146,11 @@ console.log(fname);
   // changed the file structure for better workflow and some tsConfig.json file 
   // outDir and rootDir also include propeties for...
 
-  /*
-  a few usefull commands:
-  tsc
-  tsc --init
-  tsc -w
-
-   */
+  
+  // a few usefull commands:
+  //tsc
+  //tsc --init
+  //tsc -w 
 
   // function basics
 
@@ -250,3 +249,5 @@ console.log(fname);
    } 
 calc( 10, 5, "minus"); // function calling
 
+
+*/
