@@ -101,3 +101,48 @@ randomNinja = { name: "john", age: 454 }; // acceptable
 randomNinja = { name: "mike", age: "five" }; // also acceptable because of the dynamic data-type...
 // changed the file structure for better workflow and some tsConfig.json file 
 // outDir and rootDir also include propeties for...
+/*
+a few usefull commands:
+tsc
+tsc --init
+tsc -w
+
+ */
+// function basics
+let greet = () => {
+    console.log("hello, world");
+};
+let greet2; // variable greet2 is type of function now...
+greet2 = () => {
+    console.log("hello world again");
+};
+const add = (a, b, c) => {
+    console.log(a + b);
+    console.log(c);
+};
+add(3, 5); // compiles succesfully...
+add(3, 56, 54); // also compiles successfully...
+// the "?" question mark indicates that third variable is OPTIONAL...
+const subtract = (a, b, c) => {
+    console.log(a - b);
+    console.log(c);
+    // function also accept union-types in the parameter list...
+};
+const addAgain = (a, b, c = 45) => {
+    return a + b + c;
+    // third parameter becomes OPTIONAL...
+};
+let results = addAgain(34, 53); // the type is infered
+// results = "some string"; // this won't work...
+let results2 = addAgain(323, 453, 345);
+console.log(results2);
+// return-type
+const minus = (a, b) => {
+    return a - b;
+    // function with a return-type specified...
+};
+const minus2 = (a, b) => {
+    console.log(a - b);
+    // no return type...
+};
+//type aliases
