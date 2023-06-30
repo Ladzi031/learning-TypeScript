@@ -198,8 +198,35 @@ console.log(fname);
     // no return type...
    }
 
-   //type aliases
+   // type aliases
+   type studentDetails = number | string;
+   let test1: studentDetails;
+   test1 = "this is a types";
+   type studentModel = {
+    name:string,
+    studentNumber:number,
+    courseName:string
+   };
+   let student1:studentModel;
+   student1 = {
+    name:"ryan",
+    studentNumber: 34242,
+    courseName: "history"
+   };
 
+   let studentArray: studentModel[] = []; // empty array of type studentObject
+   studentArray.push(student1);
+
+
+   const someFunc = (arg: studentModel[]): void => { // function taking a 
+    arg.forEach(learner => {
+      console.log(learner.name)
+    });
+   }
+   someFunc(studentArray);
+
+   const anotherFunc = (value: studentDetails): void => {
+    console.log(value);
+   }
+   anotherFunc(test1);
    
-  
-

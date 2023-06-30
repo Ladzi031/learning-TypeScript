@@ -145,4 +145,11 @@ const minus2 = (a, b) => {
     console.log(a - b);
     // no return type...
 };
-//type aliases
+let test1;
+test1 = "this is a types";
+let student1;
+student1 = {
+    name: "ryan",
+    studentNumber: 34242,
+    courseName: "history"
+};
