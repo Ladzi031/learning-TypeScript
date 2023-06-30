@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const Invoice_js_1 = require("./classes/Invoice.js");
+import { Invoice } from "./classes/Invoice.js";
 /*
 
 console.log(anchor2.href); // results in an error because the element might not exists in the DOM in the first place!
@@ -20,8 +18,8 @@ form.addEventListener("submit", (e) => {
     console.log(type1.value, tofrom.value, details.value, amount.valueAsNumber);
 });
 // classes
-let inovice1 = new Invoice_js_1.Invoice("james", "work on the james project", 234);
-let inovice2 = new Invoice_js_1.Invoice("mike", "work on the mike project", 500);
+let inovice1 = new Invoice("james", "work on the james project", 234);
+let inovice2 = new Invoice("mike", "work on the mike project", 500);
 let invoiceArray = [];
 invoiceArray.push(inovice1);
 invoiceArray.push(inovice2);
