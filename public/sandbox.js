@@ -153,3 +153,27 @@ student1 = {
     studentNumber: 34242,
     courseName: "history"
 };
+let studentArray = []; // empty array of type studentObject
+studentArray.push(student1);
+const someFunc = (arg) => {
+    arg.forEach(learner => {
+        console.log(learner.name);
+    });
+};
+someFunc(studentArray);
+const anotherFunc = (value) => {
+    console.log(value);
+};
+anotherFunc(test1);
+// function signatures
+let greet3; // this is not specific...
+let hello1; // function that is a little more specific...
+hello1 = (name, greet) => {
+    console.log(`${name} is saying ${greet}`);
+};
+hello1("lucas", "Ola!");
+let calc; // function signature a little more specific again, basically declaring it
+calc = (num1, num2, op) => {
+    return op === "add" ? num1 + num2 : num1 - num2;
+};
+calc(10, 5, "minus"); // function calling

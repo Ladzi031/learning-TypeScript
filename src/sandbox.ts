@@ -229,4 +229,24 @@ console.log(fname);
     console.log(value);
    }
    anotherFunc(test1);
-   
+  
+
+   // function signatures
+   let greet3:Function;  // this is not specific...
+
+   let hello1: (x:string, y: string) => void;  // function that is a little more specific...
+
+
+   hello1 = (name:string, greet:string): void => {
+    console.log(`${name} is saying ${greet}`);
+   } 
+   hello1("lucas", "Ola!");
+
+
+   let calc: (x:number, y:number, z:string) => number; // function signature a little more specific again, basically declaring it
+
+   calc = (num1: number, num2: number, op:string):number => { // function definition
+      return op === "add" ? num1 + num2 : num1 - num2;
+   } 
+calc( 10, 5, "minus"); // function calling
+
