@@ -23,22 +23,26 @@ form.addEventListener("submit", (e: Event) => {
 // classes
 class Invoice {
 
-    client: string;
-    details: string;
-    amount: number;
+    // readonly client: string;
+    // private details: string;
+    // private amount: number;
 
-    constructor( client:string, details:string, amount:number ) {
+    
+    // constructor variable with access modifiers...
+    constructor( readonly client:string, private details:string, private amount:number ) {
+        /*
         this.client = client;
         this.details = details;
         this.amount = amount;
+         */
     }
     format(){
         return `${this.client} owes R${this.amount} for ${details}`;
     }
 }
 
-let inovice1 = new Invoice("james", "", 234);
-let inovice2 = new Invoice("mike", "", 500);
+let inovice1 = new Invoice("james", "work on the james project", 234);
+let inovice2 = new Invoice("mike", "work on the mike project", 500);
 
 
 let invoiceArray: Invoice[] = [];
@@ -48,3 +52,8 @@ invoiceArray.push(inovice2);
 // when Invoice class properies don't have acces modifiers they are easily accessible...
  // inovice1.client = "david"; // this is allowed... which might be a problem!
 
+
+ // access modifiers
+ // pubilc
+ // private
+ // readonly
