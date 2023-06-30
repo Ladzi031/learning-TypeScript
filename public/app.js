@@ -26,3 +26,18 @@ invoiceArray.push(inovice2);
 invoiceArray.forEach(inv => {
     console.log(inv.client, inv.format());
 });
+const someone = {
+    name: "luigi",
+    age: 34,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log(amount);
+        return amount;
+    }
+};
+const greetPerson = (person) => {
+    console.log("hello ", person.name);
+};
+greetPerson(someone);
