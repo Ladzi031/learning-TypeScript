@@ -1,41 +1,42 @@
-var character = 'mario';
+"use strict";
+const character = 'mario';
 console.log(character);
-var inputs = document.querySelectorAll('input');
-inputs.forEach(function (input) {
+const inputs = document.querySelectorAll('input');
+inputs.forEach((input) => {
     console.log(input);
 });
 // typescript types
-var fname = "ladzi031";
+let fname = "ladzi031";
 console.log(fname);
 //fname = 32; ... will result in an error
-var isBlackBelt = false;
+let isBlackBelt = false;
 // isBlackBelt = "yes" ... results in an error
 isBlackBelt = true;
-var age = 18;
-var circumference = function (diameter) {
+let age = 18;
+const circumference = (diameter) => {
     return diameter * Math.PI;
 };
 console.log(circumference(5));
 // arrays and objects
-var arrayNames = ["john", "luigi", "yoshi"];
+let arrayNames = ["john", "luigi", "yoshi"];
 // arrayNames.push(234) // error
 // arraynames[2] = 34; 
 arrayNames.push("toad");
-var numbers = [3, 34, 532, 523];
+let numbers = [3, 34, 532, 523];
 numbers.push(23);
 numbers[3] = 342;
 //numbers.push("234");
 //numbers[1] = "234fxv";
 // when declaring the array at the start... and put different data-type values in it... typeScript will not produce any errors when you want to later add values to the same array...
-var mixedArray = ["james", 23, "farooq", 2342, 2334];
+let mixedArray = ["james", 23, "farooq", 2342, 2334];
 mixedArray.push(24);
 ;
 mixedArray[0] = 242;
 mixedArray.push("ronaldo");
 mixedArray[mixedArray.length] = 3;
-mixedArray.forEach(function (el) { return console.log(el); });
+mixedArray.forEach(el => console.log(el));
 // objects
-var ninja = {
+let ninja = {
     name: "ladzi031",
     belt: "black",
     age: 21
@@ -52,49 +53,51 @@ ninja = {
 };
 // for the above code... the data-type is infered automatically
 // Explicit TYPES
-var firstName;
-var lastName;
-var personAge;
-var isLoggedIn;
+let firstName;
+let lastName;
+let personAge;
+let isLoggedIn;
 personAge = 45;
 //personAge = "twenty one";
 isLoggedIn = true;
 //isLoggedIn = "yes";
 // arrays with Explicit-TYPES
-var ninjaList = [];
+let ninjaList = [];
 ninjaList.push("messi");
 //UNION TYPES
 // with the syntax to state that this array accepts more than one data-type "union operator--- think of: OR" remeber... 
-var mixed = []; // empty array
+let mixed = []; // empty array
 mixed.push("jacobs");
 mixed.push(32);
 mixed.push(false);
 // UNION TYPES for normal variables
-var uid;
+let uid;
 uid = "324";
 uid = 324;
 //uid = false;
 // objects
-var ninjaOne;
+let ninjaOne;
 ninjaOne = {
     name: "shaun",
     age: 324
 }; // once declared you cannot add new properties to the object
-var ninjaTwo;
+let ninjaTwo;
 ninjaTwo = {
     name: "holand",
     age: 32,
     beltColor: "yellow"
 };
 // dynamics types... "any"
-var randomNumber = 23;
+let randomNumber = 23;
 randomNumber = true;
 randomNumber = "hello";
-var mixedRandom = []; // empty array of type "any"
+let mixedRandom = []; // empty array of type "any"
 mixedRandom.push(32);
 mixedRandom.push("hello world!");
 mixedRandom.push(false);
 console.log(mixedRandom);
-var randomNinja;
+let randomNinja;
 randomNinja = { name: "john", age: 454 }; // acceptable
 randomNinja = { name: "mike", age: "five" }; // also acceptable because of the dynamic data-type...
+// changed the file structure for better workflow and some tsConfig.json file 
+// outDir and rootDir also include propeties for...
