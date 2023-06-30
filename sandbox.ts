@@ -123,3 +123,22 @@ console.log(fname);
     age: 32,
     beltColor: "yellow"
   }
+
+  // dynamics types... "any"
+  let randomNumber: any = 23;
+  randomNumber = true;
+  randomNumber = "hello";
+
+  let mixedRandom: any[] = []; // empty array of type "any"
+  mixedRandom.push(32);
+  mixedRandom.push("hello world!");
+  mixedRandom.push(false);
+  console.log(mixedRandom);
+
+  let randomNinja: { // describing the structure of the object here... 
+    name: any,
+    age: any
+  };
+  randomNinja = { name: "john", age: 454 }; // acceptable
+  randomNinja = { name: "mike", age: "five"}; // also acceptable because of the dynamic data-type...
+  

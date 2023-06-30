@@ -86,3 +86,15 @@ ninjaTwo = {
     age: 32,
     beltColor: "yellow"
 };
+// dynamics types... "any"
+var randomNumber = 23;
+randomNumber = true;
+randomNumber = "hello";
+var mixedRandom = []; // empty array of type "any"
+mixedRandom.push(32);
+mixedRandom.push("hello world!");
+mixedRandom.push(false);
+console.log(mixedRandom);
+var randomNinja;
+randomNinja = { name: "john", age: 454 }; // acceptable
+randomNinja = { name: "mike", age: "five" }; // also acceptable because of the dynamic data-type...
