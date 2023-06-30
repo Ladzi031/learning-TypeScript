@@ -21,3 +21,8 @@ export class Invoice {
         this.amount = amount;
          */
 
+ // access modifiers
+ // pubilc
+ // private
+ // readonly
+

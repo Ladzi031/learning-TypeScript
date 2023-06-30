@@ -31,13 +31,7 @@ let invoiceArray: Invoice[] = [];
 invoiceArray.push(inovice1);
 invoiceArray.push(inovice2);
 
- // inovice1.client = "david"; // this is allowed... which might be a problem!
-
- // access modifiers
- // pubilc
- // private
- // readonly
-
+ 
  invoiceArray.forEach(inv => {
     console.log(inv.client, inv.format());
 });

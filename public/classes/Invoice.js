@@ -21,3 +21,7 @@ exports.Invoice = Invoice;
         this.details = details;
         this.amount = amount;
          */
+// access modifiers
+// pubilc
+// private
+// readonly
