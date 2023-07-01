@@ -1,4 +1,7 @@
 export class Payment {
+    recepient;
+    details;
+    amount;
     constructor(recepient, details, amount) {
         this.recepient = recepient;
         this.details = details;
