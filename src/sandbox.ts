@@ -195,6 +195,9 @@ let fname = "ladzi031";
     // console.log(a - b);
     // no return type...
    }
+   
+   minus(6,2);
+   minus2(65,7);
 
    // type aliases
    type studentDetails = number | string;

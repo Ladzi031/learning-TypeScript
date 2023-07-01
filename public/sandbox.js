@@ -144,6 +144,8 @@ const minus2 = (a, b) => {
     // console.log(a - b);
     // no return type...
 };
+minus(6, 2);
+minus2(65, 7);
 let test1;
 test1 = "this is a types";
 let student1;
