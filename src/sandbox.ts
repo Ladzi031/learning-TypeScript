@@ -1,16 +1,16 @@
-/* 
+import { Invoice } from "./classes/Invoice.js";
 const character = 'mario';
-console.log(character);
+//console.log(character);
 
 const inputs = document.querySelectorAll('input');
 inputs.forEach((input)  => {
-    console.log(input);
+    //console.log(input);
 });
 
 // typescript types
 
 let fname = "ladzi031";
-console.log(fname);
+//console.log(fname);
 //fname = 32; ... will result in an error
 
  let isBlackBelt = false;
@@ -23,7 +23,7 @@ console.log(fname);
  const circumference = (diameter: number) => {
     return diameter * Math.PI;
  }
- console.log(circumference(5));
+ //console.log(circumference(5));
 
 
  // arrays and objects
@@ -46,7 +46,9 @@ console.log(fname);
   mixedArray[0] = 242;
   mixedArray.push("ronaldo");
   mixedArray[mixedArray.length] = 3;
-  mixedArray.forEach(el => console.log(el));
+  mixedArray.forEach(el => {
+    //console.log(el)
+  });
 
   // objects
   let ninja = {
@@ -104,9 +106,6 @@ console.log(fname);
 
 
   // objects
-
-
-  
   let ninjaOne: object;
   ninjaOne = {
     name: "shaun",
@@ -134,7 +133,7 @@ console.log(fname);
   mixedRandom.push(32);
   mixedRandom.push("hello world!");
   mixedRandom.push(false);
-  console.log(mixedRandom);
+  //console.log(mixedRandom);
 
   let randomNinja: { // describing the structure of the object here... 
     name: any,
@@ -155,26 +154,26 @@ console.log(fname);
   // function basics
 
    let greet = () => {
-    console.log("hello, world");
+    //console.log("hello, world");
    }
 
    let greet2: Function; // variable greet2 is type of function now...
 
    greet2 = () => {
-    console.log("hello world again");
+    //console.log("hello world again");
    }
 
    const add = (a: number, b: number, c?:number) => {
-    console.log(a + b);
-    console.log(c)
+    // console.log(a + b);
+    //console.log(c)
    }
    add(3,5); // compiles succesfully...
    add(3,56,54); // also compiles successfully...
    // the "?" question mark indicates that third variable is OPTIONAL...
 
    const subtract = (a: number, b: number, c: number | string) => {
-    console.log(a - b);
-    console.log(c);
+    //console.log(a - b);
+    //console.log(c);
     // function also accept union-types in the parameter list...
    }
    const addAgain = (a: number, b:number, c:number = 45) => {
@@ -185,7 +184,7 @@ console.log(fname);
     // results = "some string"; // this won't work...
    
    let results2 =  addAgain(323, 453,345);
-   console.log(results2);
+   //console.log(results2);
 
    // return-type
    const minus = (a:number, b:number): number => {
@@ -193,7 +192,7 @@ console.log(fname);
     // function with a return-type specified...
    }
    const minus2 = (a:number, b:number): void => {
-    console.log(a - b);
+    // console.log(a - b);
     // no return type...
    }
 
@@ -219,13 +218,13 @@ console.log(fname);
 
    const someFunc = (arg: studentModel[]): void => { // function taking a 
     arg.forEach(learner => {
-      console.log(learner.name)
+     // console.log(learner.name)
     });
    }
    someFunc(studentArray);
 
    const anotherFunc = (value: studentDetails): void => {
-    console.log(value);
+    //console.log(value);
    }
    anotherFunc(test1);
   
@@ -237,7 +236,7 @@ console.log(fname);
 
 
    hello1 = (name:string, greet:string): void => {
-    console.log(`${name} is saying ${greet}`);
+   // console.log(`${name} is saying ${greet}`);
    } 
    hello1("lucas", "Ola!");
 
@@ -250,21 +249,12 @@ console.log(fname);
 calc( 10, 5, "minus"); // function calling
 
 
-*/
-
- //docs.forEach(el => console.log(el.format()));
-
-/*
-
-console.log(anchor2.href); // results in an error because the element might not exists in the DOM in the first place!
+//console.log(anchor2.href); // results in an error because the element might not exists in the DOM in the first place!
 
 const anchor = document.querySelector('a')!; // exclamation mark tells tsc that we are certain that the anchor element exists in the DOM...
 const anchor2 = document.querySelector("a"); // anchor2 data type is HTMLAnchorElement | null
 // console.log("testing!");
-*/
 
-/*
-  
 
 // classes
 let inovice1 = new Invoice("james", "work on the james project", 234);
@@ -276,8 +266,9 @@ invoiceArray.push(inovice1);
 invoiceArray.push(inovice2);
 
  
-/*  invoiceArray.forEach(inv => {
-    console.log(inv.client, inv.format());
+
+ invoiceArray.forEach(inv => {
+   // console.log(inv.client, inv.format());
 }); 
  
 
@@ -296,17 +287,22 @@ const someone: IsPerson = {
   name:"luigi",
   age: 34,
   speak(text: string):void {
-      console.log(text);
+     // console.log(text);
   },
   spend(amount:number):number {
-      console.log(amount);
+      //console.log(amount);
       return amount;
   }
 }
 const greetPerson = (person: IsPerson): void => {
-  console.log("hello ", person.name);
+ // console.log("hello ", person.name);
 }
 greetPerson(someone);
 
 
-*/
+// generics
+
+
+
+
+
