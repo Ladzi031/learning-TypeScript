@@ -195,7 +195,7 @@ let fname = "ladzi031";
     // console.log(a - b);
     // no return type...
    }
-   
+
    minus(6,2);
    minus2(65,7);
 
@@ -304,8 +304,73 @@ greetPerson(someone);
 
 
 // generics
+// generics simply allow us to create reuseable blocks of code which can be used with different types
+ const addUID = (obj: object) => {
+  let uid = Math.floor(Math.random() * 100);
+  return {...obj, uid};
+ }
+ let test: object = {
+  name: "roger",
+  age: 43
+ };
+ let docOne = addUID(test);
+ // problem with the above function is that it does not have access to the property name of the object being passed in the argument... solution: generic
 
 
+ // <T extends object> | <T extends {name: string}> ... here we ensuring that type passed is an object or object that has a property named name
+ const addUID2 = <T>(obj: T) => {
+  let uid = Math.floor(Math.random() * 100);
+  return {...obj, uid};
+ }
+ let result = addUID2(test); // this will work fine...
+//console.log(result);
+
+
+
+//generic with interfaces
+interface Resource<T> {
+  uid: number,
+  resourceName: string,
+  data:T 
+}
+
+const docTwo: Resource<string[]> = {
+  uid: 23,
+  resourceName: "shopping list",
+  data: ["bread", "eggs", "milk", "toilet roll"]
+}
+ const docThree: Resource<object> = {
+  uid: 43,
+  resourceName: "person",
+  data: {name: "fabian"}
+ }
+// console.log(docTwo, docThree);
+
+
+ //ENUMS
+ enum JobType { 
+  ENGINNEER,
+  HISTORIAN,
+  PROGRAMMER,
+  DIRECTOR
+};
+
+ interface Employee {
+  id: number,
+  name: string,
+  occupation: JobType, // note
+  info: string
+ }
+
+  const personOne: Employee = {
+    id: Math.floor(Math.random() * 100),
+    name: "Sam",
+    occupation: JobType.DIRECTOR, //note
+    info: "been in the industry for 15 years!"
+  }
+
+
+ 
 
 
 
