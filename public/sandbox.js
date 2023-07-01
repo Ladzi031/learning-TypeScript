@@ -250,3 +250,15 @@ const personOne = {
     occupation: JobType.DIRECTOR,
     info: "been in the industry for 15 years!"
 };
+//tuples
+let testArray = ["ryan", 43, false]; // the infered data-type for this array is "any"
+testArray[0] = true;
+testArray[2] = "something nice!";
+testArray[1] = 34;
+// with tuples, this is not allowed... once definded!!, the index will only "deal" with that data-type
+let testTuple = ["casper", 43, true];
+//testTuple[0] = 34;
+testTuple[0] = "uncle kenny";
+testTuple[1] = 34;
+let student;
+student = ["holland", 343434];
