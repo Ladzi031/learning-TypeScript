@@ -1,6 +1,6 @@
 import { HasFormatter } from "../interfaces/HasFormatter";
 
-export class Payments implements HasFormatter{
+export class Payment implements HasFormatter{
 
     constructor(
         readonly recepient:string,
