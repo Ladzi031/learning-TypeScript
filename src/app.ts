@@ -41,6 +41,8 @@ invoiceArray.push(inovice2);
 interface IsPerson {
     name: string,
     age: number,
+
+    //more like a function signature here...
     speak(a: string):void,
     spend(a: number): number    
 }
